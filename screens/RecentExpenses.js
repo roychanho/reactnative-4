@@ -10,7 +10,6 @@ function RecentExpenses() {
   const recentExpenses = expensesCtx.expenses.filter((expense) => {
     const today = new Date();
     const date7DaysAgo = getDateMinusDays(today, 7);
-    console.log(date7DaysAgo)
 
     return expense.date >= date7DaysAgo && expense.date <= today;
   });
